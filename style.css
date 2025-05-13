@@ -3,3 +3,41 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --primary-color: #F5CF06;
+    --secondary-color: #8E4106;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 90vw;
+    margin: auto;
+}
+header{
+    background-color: #fff;
+    margin-top: 70px;
+
+}
+header a{
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+main{
+    background-color: #d3d3d3;
+    flex-grow: 1;
+}
+footer{
+    background: #000;
+}

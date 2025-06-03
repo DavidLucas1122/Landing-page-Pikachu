@@ -7,6 +7,7 @@
 :root{
     --primary-color: #F5CF06;
     --secondary-color: #8E4106;
+    --font:
 }
 
 body{
@@ -24,7 +25,7 @@ body{
     margin: auto;
 }
 header{
-    background-color: #fff;
+
     margin-top: 70px;
 
 }
@@ -33,6 +34,13 @@ header a{
     display: flex;
     align-items: center;
     gap: 16px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    /* Cada rem são 16 px */
+    font-size: 2rem;
+    font-family: 'Righteous', cursive;
+
+
 }
 main{
     background-color: #d3d3d3;

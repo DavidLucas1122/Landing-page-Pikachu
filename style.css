@@ -7,7 +7,6 @@
 :root{
     --primary-color: #F5CF06;
     --secondary-color: #8E4106;
-    --font:
 }
 
 body{
@@ -21,7 +20,7 @@ body{
 .conteiner{
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr); /* Dividir a tela em 12 colunas */
     width: 90vw;
     margin: auto;
 }
@@ -113,3 +112,28 @@ main{
     left: 50%;
     transform: translate(-50%, -50% );
 }
+
+/* TABLET */
+ @media (max-width:960px){
+    .conteiner{
+    grid-template-columns: 1fr;
+    }
+
+    .description{
+        grid-column: 1;
+        grid-row: 2;
+        place-self: center;
+        text-align: center;
+    }
+    .action{
+        grid-column: 1;
+        grid-row: 2;
+        place-self: end center;
+        margin-bottom: 24px;
+    }
+
+    footer{
+        display: none;
+    }
+    
+ }

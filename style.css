@@ -15,6 +15,7 @@ body{
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
+    font-family: 'Righteous', cursive;
 }
 
 .conteiner{
@@ -36,16 +37,79 @@ header a{
     gap: 16px;
     text-decoration: none;
     color: var(--secondary-color);
-    /* Cada rem são 16 px */
-    font-size: 2rem;
-    font-family: 'Righteous', cursive;
-
-
+    font-size: 2rem;     /* Cada rem são 16 px */
 }
+
+
 main{
-    background-color: #d3d3d3;
     flex-grow: 1;
 }
-footer{
-    background: #000;
+.title{
+    position: relative;
+    grid-column: 1/-1; /* Quanto o título deve ocupar, no caso, a linha toda */
+    place-self: center;
+    display: flex; /* Uso de display flex junto a grid */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title_text{
+    font-size: 20vw;
+    color: #fff;
+}
+.title_transparent{
+    position: absolute; /* Com position absolute, o conteiner vai seguir o maior pai da hierarquia, no caso, o body, por isso, se torna necessário adicionar um position relative ao pai */
+    top: -50%; /* top -50 para ficar na metade superior do pai */
+    font-size: 27vw;
+    color: #fff5;
+    z-index: -1; /* z-index envolve profundidade */
+}
+
+
+.description{
+    grid-column: 1/7; /* Ocupar metade da linha */
+    place-self: start;
+    color: var(--secondary-color);
+    z-index: 1;
+}
+
+.description_title{
+    font-size: 4rem;
+}
+.description_text{
+    font-size: 1.5rem;
+}
+
+
+
+.action{
+    grid-column: 7/-1; /* Ocupar outra metade da linha */
+    place-self: start end; /* alinhar um item individual nas direções de bloco e em linha simultaneamente */
+    height: 100px;
+    width: 411px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    z-index: 1;
+}
+
+
+.footer_text{
+    grid-column: 1/-1;
+    place-self: center;
+    margin-bottom: 24px;
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.pikachu{
+    position: absolute;
+    /* Centralizando sem um pai como referência */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50% );
 }
